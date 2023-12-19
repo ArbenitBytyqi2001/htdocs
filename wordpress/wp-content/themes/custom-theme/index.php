@@ -181,7 +181,92 @@
                 <p><?php echo esc_html($person['desc']); ?></p>
             </div>
         <?php endforeach; ?>
+        </div>
+    <div class="pricing-plans">
+        <h1><?php echo esc_html__('Pricing Plans', 'your-theme-textdomain'); ?></h1>
+        <p><?php echo esc_html__('Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, optio.', 'your-theme-textdomain'); ?></p>
+        <div class="all-plans">
+            <?php
+            $plans_data = array(
+                array(
+                    'name' => 'Standard Plan',
+                    'price' => '$19.00',
+                    'duration' => '1 Month',
+                    'features' => array(
+                        'Lorem, ipsum dolor.',
+                        'Lorem, ipsum dolor.',
+                        'Lorem, ipsum dolor.',
+                        'Lorem, ipsum dolor.',
+                        'Lorem, ipsum dolor.',
+                        'Lorem, ipsum dolor.'
+                    ),
+                ),
+                array(
+                    'name' => 'Business Plan',
+                    'price' => '$79.00',
+                    'duration' => '6 Months',
+                    'features' => array(
+                        'Lorem, ipsum dolor.',
+                        'Lorem, ipsum dolor.',
+                        'Lorem, ipsum dolor.',
+                        'Lorem, ipsum dolor.',
+                        'Lorem, ipsum dolor.',
+                        'Lorem, ipsum dolor.'
+                    ),
+                ),
+                array(
+                    'name' => 'Premium Plan',
+                    'price' => '$199.00',
+                    'duration' => '12 Months',
+                    'features' => array(
+                        'Lorem, ipsum dolor.',
+                        'Lorem, ipsum dolor.',
+                        'Lorem, ipsum dolor.',
+                        'Lorem, ipsum dolor.',
+                        'Lorem, ipsum dolor.',
+                        'Lorem, ipsum dolor.'
+                    ),
+                ),
+            );
 
+            foreach ($plans_data as $plan) :
+            ?>
+                <div class="plans">
+                    <h2><?php echo esc_html($plan['name']); ?></h2>
+                    <h3><?php echo esc_html($plan['price']); ?></h3>
+                    <p><?php echo esc_html($plan['duration']); ?></p>
+                    <ul>
+                        <?php foreach ($plan['features'] as $feature) : ?>
+                            <li><?php echo esc_html($feature); ?></li>
+                        <?php endforeach; ?>
+                    </ul>
+                    <button><?php echo esc_html__('BUY NOW', 'your-theme-textdomain'); ?></button>
+                </div>
+            <?php endforeach; ?>
+        </div>
+    </div>
+    <div class="request-call">
+        <div class="request-call-text">
+            <h2><?php echo esc_html__('Request a Call Back', 'your-theme-textdomain'); ?></h2>
+            <p><?php echo esc_html__('Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae quasi repellat labore autem officia!', 'your-theme-textdomain'); ?></p>
+        </div>
+        <form>
+            <select id="category" name="category">
+                <option value="option1"><?php echo esc_html__('Web Development', 'your-theme-textdomain'); ?></option>
+                <option value="option2"><?php echo esc_html__('Web Design', 'your-theme-textdomain'); ?></option>
+                <option value="option3"><?php echo esc_html__('SEO & Marketing', 'your-theme-textdomain'); ?></option>
+            </select>
+            <input type="text" id="name" name="name" placeholder="<?php echo esc_html__('Your Name', 'your-theme-textdomain'); ?>" required>
+            <input type="text" id="phone" name="phone" placeholder="<?php echo esc_html__('Your Phone', 'your-theme-textdomain'); ?>" required>
+            <button type="submit"><?php echo esc_html__('Submit', 'your-theme-textdomain'); ?></button>
+        </form>
+    </div>
+    <div id="map-container">
+        <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+            src="https://www.openstreetmap.org/export/embed.html?bbox=-74.0027625565529%2C40.73974318101243%2C-73.98714065551759%2C40.74881726230538&layer=mapnik&marker=40.7442807%2C-73.9949339"
+            style="border: none"></iframe><br /><small><a
+                href="https://www.openstreetmap.org/?mlat=40.7443&amp;mlon=-73.9949#map=16/40.7443/-73.9949"></a></small>
+    </div>
     <?php get_footer(); ?>
     <?php wp_footer(); ?>
 </body>
