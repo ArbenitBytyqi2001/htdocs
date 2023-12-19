@@ -122,7 +122,66 @@
         <button>
             <?php echo esc_html__('GET IN TOUCH', 'your-theme-textdomain'); ?>
         </button>
+    </div><div class="main-industries">
+        <div class="main-industries-text">
+            <h1><?php echo esc_html__('Our main industries', 'your-theme-textdomain'); ?></h1>
+            <h4><?php echo esc_html__('An award-winning design and development team that is proud of our work', 'your-theme-textdomain'); ?></h4>
+            <ul>
+                <?php for ($i = 1; $i <= 5; $i++) : ?>
+                    <li>
+                        <p><?php echo esc_html__('Lorem ipsum dolor sit amet consectetur adipisicing.', 'your-theme-textdomain'); ?></p>
+                    </li>
+                <?php endfor; ?>
+            </ul>
+        </div>
+        <div class="main-industries-icons">
+            <div class="web-development">
+                <p><?php echo esc_html__('Web Development', 'your-theme-textdomain'); ?></p>
+            </div>
+            <div class="web-design">
+                <p><?php echo esc_html__('Web Design', 'your-theme-textdomain'); ?></p>
+            </div>
+        </div>
     </div>
+    <div class="logos">
+        <?php
+        $logo_images = array(
+            'logo-one.png',
+            'logo-two.png',
+            'logo-three.png',
+            'logo-fourth.png',
+            'logo-fifth.png',
+        );
+
+        foreach ($logo_images as $logo) :
+        ?>
+            <img src="<?php echo get_template_directory_uri() . '/assets/' . $logo; ?>" alt="Logo">
+        <?php endforeach; ?>
+    </div>
+    <div class="working-here">
+        <?php
+        $people_data = array(
+            array(
+                'img' => 'profile.png',
+                'name' => 'John Lenard',
+                'desc' => 'Lorem ipsum dolor sit ame orem ipsum dolor sit amet.'
+            ),
+            array(
+                'img' => 'profile.png',
+                'name' => 'Ema Lenard',
+                'desc' => 'Lorem ipsum dolor sit am etem ipsum dolor sit amet.'
+            ),
+        );
+
+        foreach ($people_data as $person) :
+        ?>
+            <div class="working-here-people">
+                <img src="<?php echo get_template_directory_uri() . '/assets/' . $person['img']; ?>" alt="Logo" width="140px">
+                <h3><?php echo esc_html($person['name']); ?> |</h3>
+                <p><?php echo esc_html($person['desc']); ?></p>
+            </div>
+        <?php endforeach; ?>
+
     <?php get_footer(); ?>
     <?php wp_footer(); ?>
 </body>
