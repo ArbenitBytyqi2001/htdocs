@@ -60,6 +60,69 @@
             <img src="<?php echo get_template_directory_uri(); ?>/assets/signature.png" alt="Logo" width="300px">
         </div>
     </div>
+    <div class="missions">
+        <div class="discussion">
+            <h3><?php echo esc_html__('01. Discussion', 'your-theme-textdomain'); ?></h3>
+            <p>
+                <?php echo esc_html__('Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste praesentium culpa, aspernatur maxime at odio!', 'your-theme-textdomain'); ?>
+            </p>
+        </div>
+        <div class="development">
+            <h3><?php echo esc_html__('02. Development', 'your-theme-textdomain'); ?></h3>
+            <p>
+                <?php echo esc_html__('Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste praesentium culpa, aspernatur maxime at odio!', 'your-theme-textdomain'); ?>
+            </p>
+        </div>
+        <div class="release-project">
+            <h3><?php echo esc_html__('03. Release Project', 'your-theme-textdomain'); ?></h3>
+            <p>
+                <?php echo esc_html__('Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste praesentium culpa, aspernatur maxime at odio!', 'your-theme-textdomain'); ?>
+            </p>
+        </div>
+    </div>
+    <div class="facts-about-us">
+        <h1><?php echo esc_html__('Some Facts About Us', 'your-theme-textdomain'); ?></h1>
+        <p><?php echo esc_html__('Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus laboriosam odit velit esse? Facere modi impedit iure sed officiis quidem!', 'your-theme-textdomain'); ?></p>
+        <div class="facts">
+            <div class="projects-completed">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/projects-completed.png" alt="Logo">
+                <div class="projects-completed-text">
+                    <h2>548</h2>
+                    <h4><?php echo esc_html__('Projects Completed', 'your-theme-textdomain'); ?></h4>
+                </div>
+            </div>
+            <div class="working-hours">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/working-hours.png" alt="Logo">
+                <div class="working-hours-text">
+                    <h2>1465</h2>
+                    <h4><?php echo esc_html__('Working Hours', 'your-theme-textdomain'); ?></h4>
+                </div>
+            </div>
+            <div class="positive-feedbacks">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/positive-feedbacks.png" alt="Logo">
+                <div class="positive-feedbacks-text">
+                    <h2>612</h2>
+                    <h4><?php echo esc_html__('Positive Feedbacks', 'your-theme-textdomain'); ?></h4>
+                </div>
+            </div>
+            <div class="happy-clients">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/happy-clients.png" alt="Logo">
+                <div class="happy-clients-text">
+                    <h2>735</h2>
+                    <h4><?php echo esc_html__('Happy Clients', 'your-theme-textdomain'); ?></h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="get-in-touch">
+        <div class="get-in-touch-text">
+            <h2><?php echo esc_html__('Want to work with us?', 'your-theme-textdomain'); ?></h2>
+            <p><?php echo esc_html__('If you have any questions - please contact us via the contact form', 'your-theme-textdomain'); ?></p>
+        </div>
+        <button>
+            <?php echo esc_html__('GET IN TOUCH', 'your-theme-textdomain'); ?>
+        </button>
+    </div>
     <?php get_footer(); ?>
     <?php wp_footer(); ?>
 </body>
